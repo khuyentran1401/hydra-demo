@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "hydra-demo"
+version = "0.1.0"
+description = ""
+authors = ["Khuyen Tran"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+hydra-core = "^1.1.1"
+pandas = "^2.0.1"
+scikit-learn = "^1.2.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pre-commit = "^2.17.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+# black 
+line-length = 79
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+# flake8
+ignore = ["E501"]
+select = ["B","C","E","F","W","B9"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
