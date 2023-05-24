@@ -93,3 +93,7 @@ target/
 # Hydra logs
 outputs
 .hydra
+multirun
+
+# Models
+models

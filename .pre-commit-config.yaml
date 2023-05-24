@@ -4,6 +4,6 @@ repos:
   hooks:
     - id: ruff
 - repo: https://github.com/executablebooks/mdformat
-  rev: 'v0.7.16'
+  rev: 0.7.16
   hooks:
     - id: mdformat
