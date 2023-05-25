@@ -6,5 +6,5 @@ defaults:
 data:
   raw: data/raw/winequality-red.csv
   intermediate: data/intermediate
-  
+
 model: models

@@ -1,5 +1,3 @@
-from pathlib import Path
-
 import pandas as pd
 from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
@@ -30,7 +28,7 @@ def train_model(
 
 def save_model(model, path: str):
     """Save model to path"""
-    joblib.dump(model, f"{path}/model.pkl")
+    joblib.dump(model, f"{path}/svm.pkl")
 
 
 @hydra.main(config_path="../conf", config_name="main", version_base=None)
