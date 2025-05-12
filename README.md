@@ -1,25 +1,18 @@
-<div align="center">
-<h1 align="center">
-Demo for Stop Hard Coding in a Data Science Project - Use Configuration Files Instead
-</h3>
+# Hydra Demo
 
-[![View the article](https://img.shields.io/badge/Data%20Science%20Simplified-View%20Blog-red?logo=wordpress)](https://mathdatasimplified.com/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)
-  
-![](image.png)
-
-</div>
+[![View the Article](https://img.shields.io/badge/CodeCut-View%20the%20Article-blue)](https://codecut.ai/stop-hard-coding-in-a-data-science-project-use-configuration-files-instead/)  
 
 ## Set up the environment
 
-1. Install [Poetry](https://python-poetry.org/docs/#installation)
-1. Activate the virtual environment:
-
-```bash
-poetry shell
-```
-
+1. Install [uv](https://github.com/astral-sh/uv)
 1. Set up the environment:
 
 ```bash
-make environment
+uv sync
 ```
+
+## Download the data
+
+1. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009?resource=download)
+
+2. Move the downloaded file to `data/raw/`

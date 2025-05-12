@@ -1,12 +1,13 @@
+import hydra
+import joblib
 import pandas as pd
+from omegaconf import DictConfig
 from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
+
 from helper import load_data
-import hydra
-from omegaconf import DictConfig
-import joblib
 
 
 def create_pipeline() -> Pipeline:

@@ -1,13 +1,12 @@
 import warnings
 from typing import Tuple
 
+import hydra
 import pandas as pd
+from omegaconf import DictConfig
 from sklearn.model_selection import train_test_split
 
 from helper import load_data, save_data
-import hydra
-from omegaconf import DictConfig
-
 
 # Ignore all future warnings
 warnings.simplefilter(action="ignore", category=FutureWarning)

@@ -11,9 +11,7 @@ def load_data(path: str):
     elif file_path.suffix == ".pkl":
         df = pd.read_pickle(file_path)
     else:
-        raise ValueError(
-            "File format not supported. Please use a CSV or PKL file."
-        )
+        raise ValueError("File format not supported. Please use a CSV or PKL file.")
 
     return df
 
