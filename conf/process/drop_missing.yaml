@@ -1,0 +1,4 @@
+strategy: drop_missing
+cols_to_drop: ["id", "timestamp", "customer_id"]
+impute: false
+normalize: false
