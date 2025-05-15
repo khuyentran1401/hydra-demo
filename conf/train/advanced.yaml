@@ -1,0 +1,11 @@
+hyperparameters:
+  svm__C: [0.1, 1, 10, 100]
+  svm__kernel: ["rbf", "linear", "poly"]
+  svm__gamma: ["scale", "auto", 0.1, 0.01]
+  svm__degree: [2, 3, 4]  # Only used for poly kernel
+
+grid_search:
+  cv: 5
+  scoring: "f1_weighted"  # Better for imbalanced datasets
+  n_jobs: -1
+  verbose: 1 

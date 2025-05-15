@@ -1,5 +1,0 @@
-strategy: normalize_and_impute
-impute: true
-impute_strategy: mean
-normalize: true
-scaler: minmax

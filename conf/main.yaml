@@ -1,7 +1,8 @@
 defaults:
   - process: drop_missing
+  - train: basic
   - _self_
 
 data:
-  raw: data/raw/winequality-red.csv
+  raw: data/raw/my_data.csv
   intermediate: data/intermediate

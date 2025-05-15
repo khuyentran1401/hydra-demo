@@ -1,0 +1,9 @@
+hyperparameters:
+  svm__C: [0.1, 1, 10]
+  svm__kernel: ["rbf", "linear"]
+  svm__gamma: ["scale", "auto"]
+
+grid_search:
+  cv: 5
+  scoring: "accuracy"
+  n_jobs: -1
