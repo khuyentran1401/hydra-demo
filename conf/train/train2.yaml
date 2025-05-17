@@ -12,4 +12,4 @@ hyperparameters:
 grid_search:
   cv: 2
   scoring: accuracy
-  verbose: 3
+  verbose: 0

@@ -11,6 +11,9 @@ from helper import load_data
 
 
 def create_pipeline() -> Pipeline:
+    print("\nCreating pipeline with:")
+    print("- StandardScaler for feature scaling")
+    print("- SVC (Support Vector Classifier) as the model")
     return Pipeline([("scaler", StandardScaler()), ("svm", SVC())])
 
 
@@ -22,13 +25,19 @@ def train_model(
     grid_params: dict,
 ) -> GridSearchCV:
     """Train model using GridSearchCV"""
+    print("\nTraining model with parameters:")
+    print(f"Hyperparameters to search: {hyperparameters}")
+    print(f"Grid search parameters: {grid_params}")
     grid_search = GridSearchCV(pipeline, dict(hyperparameters), **grid_params)
     grid_search.fit(X_train, y_train)
+    print(f"\nBest parameters found: {grid_search.best_params_}")
+    print(f"Best cross-validation score: {grid_search.best_score_:.3f}")
     return grid_search
 
 
 def save_model(model, path: str):
     """Save model to path"""
+    print(f"\nSaving model to: {path}/svm.pkl")
     joblib.dump(model, f"{path}/svm.pkl")
 
 

@@ -13,11 +13,14 @@ warnings.simplefilter(action="ignore", category=FutureWarning)
 
 
 def drop_irrelevant_columns(data: pd.DataFrame, columns: list) -> pd.DataFrame:
+    print(f"\nDropping columns: {columns}")
     return data.drop(columns=columns)
 
 
 def get_X_y(data: pd.DataFrame, feature: str) -> Tuple[pd.DataFrame, pd.Series]:
     """Split data into X and y"""
+    print("\nSplitting data into X and y")
+    print(f"Feature to predict: {feature}")
     X = data.drop(columns=feature)
     y = data[feature]
     return X, y
@@ -25,6 +28,8 @@ def get_X_y(data: pd.DataFrame, feature: str) -> Tuple[pd.DataFrame, pd.Series]:
 
 def split_train_test(X: pd.DataFrame, y: pd.Series, test_size: float) -> dict:
     """Split data into train and test sets"""
+    print("\nSplitting data into train and test sets")
+    print(f"Test size: {test_size}")
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=test_size, random_state=42
     )
